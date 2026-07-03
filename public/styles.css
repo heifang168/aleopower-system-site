@@ -554,6 +554,11 @@ h3 {
   margin-top: 26px;
 }
 
+.contact-form {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .contact-secondary {
   border-color: var(--line);
   background: var(--white);
