@@ -216,8 +216,8 @@ a {
   align-items: center;
   padding: clamp(64px, 10vw, 110px) clamp(18px, 5vw, 72px);
   overflow: hidden;
-  background: var(--green-050);
-  color: var(--green-900);
+  background: var(--green-900);
+  color: var(--white);
 }
 
 .hero-media {
@@ -230,8 +230,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.82) 42%, rgba(255, 255, 255, 0.26) 68%, rgba(255, 255, 255, 0) 100%),
-    linear-gradient(0deg, rgba(238, 248, 241, 0.22), rgba(255, 255, 255, 0.1));
+    linear-gradient(90deg, rgba(8, 19, 16, 0.88) 0%, rgba(13, 33, 27, 0.72) 42%, rgba(13, 33, 27, 0.24) 68%, rgba(13, 33, 27, 0.08) 100%),
+    linear-gradient(0deg, rgba(8, 19, 16, 0.3), rgba(8, 19, 16, 0.08));
 }
 
 .hero-media img {
@@ -256,7 +256,7 @@ a {
 }
 
 .hero .eyebrow {
-  color: var(--green-700);
+  color: var(--amber);
 }
 
 h1,
@@ -293,7 +293,7 @@ h3 {
 .hero-copy {
   max-width: 670px;
   margin: 24px 0 0;
-  color: rgba(18, 53, 43, 0.78);
+  color: rgba(255, 255, 255, 0.88);
   font-size: clamp(17px, 2vw, 21px);
 }
 
@@ -314,14 +314,14 @@ h3 {
 .hero-proof div {
   min-height: 96px;
   padding: 16px;
-  border: 1px solid rgba(35, 114, 79, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 10px 24px rgba(18, 53, 43, 0.08);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 .hero-proof dt {
-  color: var(--green-700);
+  color: var(--amber);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
@@ -329,7 +329,7 @@ h3 {
 
 .hero-proof dd {
   margin: 8px 0 0;
-  color: var(--green-900);
+  color: var(--white);
   font-weight: 750;
 }
 
@@ -1251,7 +1251,7 @@ textarea {
   }
 
   .hero-media::after {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.76));
+    background: linear-gradient(0deg, rgba(8, 19, 16, 0.88), rgba(8, 19, 16, 0.58));
   }
 
   h1 {
