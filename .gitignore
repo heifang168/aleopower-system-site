@@ -1,0 +1,11 @@
+.next/
+node_modules/
+.vercel/
+out/
+npm-debug.log*
+
+tmp-doc-extract/
+建站资料/
+preview-*.png
+
+.vercel
