@@ -985,7 +985,7 @@ h3 {
 .installation-note-card h3 {
   margin: 0 0 22px;
   color: var(--green-900);
-  font-size: clamp(24px, 2vw, 34px);
+  font-size: clamp(24px, 1.75vw, 32px);
   line-height: 1.12;
   text-align: center;
 }
@@ -993,7 +993,7 @@ h3 {
 .installation-note-card p {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(18px, 1.45vw, 26px);
+  font-size: clamp(16px, 1.05vw, 20px);
   line-height: 1.42;
 }
 
