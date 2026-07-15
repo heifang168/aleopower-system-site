@@ -2,6 +2,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 const form = document.querySelector("[data-rfq-form]");
 const faqAccordion = document.querySelector("[data-faq-accordion]");
+const counters = document.querySelectorAll("[data-counter]");
 
 if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
@@ -46,4 +47,40 @@ if (faqAccordion) {
     const isOpen = item.classList.toggle("is-open");
     button.setAttribute("aria-expanded", String(isOpen));
   });
+}
+
+if (counters.length) {
+  const animateCounter = (counter) => {
+    const target = Number(counter.dataset.counter || 0);
+    const suffix = counter.dataset.suffix || "";
+    const duration = 1300;
+    const start = performance.now();
+
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = `${Math.round(target * eased)}${suffix}`;
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  const runCounters = () => counters.forEach(animateCounter);
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        runCounters();
+        observer.disconnect();
+      },
+      { threshold: 0.35 }
+    );
+    counters.forEach((counter) => observer.observe(counter));
+  } else {
+    runCounters();
+  }
 }
